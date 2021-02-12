@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="full-contain">
+            <h1>Create a new Job</h1>
+            <div class="form-container">
+              <form #f3="ngForm" (ngSubmit)="createJob(f3.value);f3.reset()">
+
+                  <div class="form-group">            
+                        <label for="headLine">HeadLine for the Job</label>
+                        <input #headLine="ngModel" ngModel name="headLine" id="headLine" type="text" class="form-control" required>
+                        <div class="alert alert-danger" *ngIf="headLine.touched && headLine.invalid">
+                          HeadLine is Required
+                        </div>            
+                  </div>
+            
+                  <div class="form-group">
+                        <label for="category">Category:</label>
+                                <select #category="ngModel" ngModel name="category" id="category" type="text" class="form-control" required>
+                                    <option disabled>Select Category</option>
+                                    <option *ngFor="let category of CategoryList">{{category}}</option>
+                        </select>
+                  </div>
+
+                
+                  <div class="form-group">          
+                      <label for="skillsRequired">Description of Job</label>
+                      <textarea maxlength="150" class="form-control" id="skillsRequired" ngModel name="skillsRequired"  #skillsRequired="ngModel" rows="3"></textarea>
+                  </div>
+          
+                  <div class="form-group">
+                      <label for="salary">Add the hourly wage</label>
+                      <input #salary="ngModel" ngModel name="salary" id="salary" type="number" class="form-control" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="pincode">Add the pincode</label>
+                    <input #pincode="ngModel" ngModel name="pincode" id="pincode" type="number" class="form-control" required>
+                 </div>
+
+                <div class="form-group">          
+                  <label for="address">Enter the address of the job</label>
+                  <textarea placeholder="Address" maxlength="150" class="form-control" id="address" ngModel name="address"  #location="ngModel" rows="1"></textarea>
+                </div>
+                
+                  <div class="buttonsave" align='center'>
+                      <button class="btn btn-success">Save</button>
+                  </div>
+                  </form>
+            </div>
+            
+            </div>
+    </body>
+</html>

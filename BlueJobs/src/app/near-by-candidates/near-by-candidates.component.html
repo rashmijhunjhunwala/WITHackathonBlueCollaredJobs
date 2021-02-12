@@ -1,0 +1,87 @@
+
+<!-- <p>employer-dashboard works!</p>
+<button type="submit" (click)="employerProfile()" class="btn btn-blue text-center">Profile</button> 
+<button type="submit" (click)="createJobs()" class="btn btn-blue text-center">Create Jobs</button> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <!--The stylesheets and the scripts-->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/
+      4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="p-4 pt-5">
+          <a
+            class="img logo rounded-circle mb-5"
+            style="background-image: url(../images/logo.jpg)"
+          ></a>
+          <ul class="list-unstyled components mb-5">
+            <li class="active">
+              <a>View Nearby Matched Workers</a
+              >
+            </li>
+      
+            <li>
+              <a>Applications</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+      <div id="content" class="p-4 p-md-5">
+        <!--The navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" (click)="logOutEmployer()">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <!--Button for routing back to dashboard-->
+        <a class="btn btn-primary" (click)="routerToDasboard()" style="margin-bottom: 20px;">Back to Dashboard</a>
+      
+        <!-- The list view of all the Nearby candidates-->
+        <ng-container *ngFor="let s of Seekers">
+            <div style="margin-bottom: 20px;" class="card">
+                <div class="card-header">
+                  Id: {{s._id}}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{s.name}}</h5>
+                  <p class="card-text">Age: {{s.age}}</p>
+                  <p class="card-text">Description: {{s.skills}}</p>
+                  <p class="card-text">Experience: {{s.experience}} years</p>
+                  <p class="card-text">Address: {{s.address}}, Pincode: {{s.pincode}}</p>
+                  <a class="btn btn-primary" style="margin-right: 10px;">View Profile</a>
+    
+                </div>
+              </div>
+        </ng-container>
+      </div>
+    </div>
+
+  </body>
+</html>
+

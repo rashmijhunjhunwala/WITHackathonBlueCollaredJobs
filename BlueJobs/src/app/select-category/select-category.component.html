@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Menu Thingy</title>
+	</head>
+	<body>
+		<form #f8=ngForm id="job_menu">
+			<div class="form-group">
+			<div class="input-group">
+			<select name="job" #category="ngModel" ngModel name="category" id="category" type="text" class="form-control">
+				<option style="display:none;">Please Select An Option</option>
+				<option >Carpenter</option>
+				<option >Cook</option>
+				<option >Construction</option>
+				<option >Custodial Work</option>
+				<option >Domestic Help</option>
+				<option >Electrician</option>
+				<option >Loading/Unloading Merchandise</option>
+				<option >Mining Workers</option>
+				<option >Plumber</option>
+				<option >Trucking</option>
+				<option >Warehousing</option>
+				<option >Waste Collection & Disposal</option>
+			</select>
+		</div>
+	</div>
+			<div class="buttonsave">
+                <button class="btn btn-success" style="/* margin-top: 10px; */width: 100px;height: 40px;" (click)="sendCategory(category.value)">Save</button>
+            </div>
+		</form>
+		<table id="container">
+			<tr>
+				<td>
+					<img src="https://cdn0.iconfinder.com/data/icons/security-and-protection-line-1/48/31-512.png">
+					<h3>Custodial Work</h3>
+				</td>
+				<td>
+					<img src="https://static.thenounproject.com/png/1327965-200.png">
+					<h3>Warehousing</h3>
+				</td>
+				<td>
+					<img src="https://findicons.com/files/icons/2770/ios_7_icons/512/cook.png">
+					<h3>Cook</h3>
+				</td>
+				<td>
+					<img src="https://static.thenounproject.com/png/221293-200.png">
+					<h3>Waste Collection & Disposal</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="https://image.flaticon.com/icons/png/512/45/45880.png">
+					<h3>Trucking</h3>
+				</td>
+				<td>
+					<img src="https://image.flaticon.com/icons/png/512/62/62041.png">
+					<h3>Loading/Unloading Merchandise</h3>
+				</td>
+				<td>
+					<img src="https://static.thenounproject.com/png/42900-200.png">
+					<h3>Mining Workers</h3>
+				</td>
+				<td>
+					<img src="https://static.thenounproject.com/png/83526-200.png">
+					<h3>Construction</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="https://static.thenounproject.com/png/1124401-200.png">
+					<h3>Carpenter</h3>
+				</td>
+				<td>
+					<img src="https://static.thenounproject.com/png/682760-200.png">
+					<h3>Plumber</h3>
+				</td>
+				<td>
+					<img src="https://cdn2.iconfinder.com/data/icons/human-behaviour-and-situations-part-1/400/Humans-23-512.png">
+					<h3>Domestic Help</h3>
+				</td>
+				<td>
+					<img src="https://cdn2.iconfinder.com/data/icons/hard-work-outline/512/electrician-512.png">
+					<h3>Electrician</h3>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

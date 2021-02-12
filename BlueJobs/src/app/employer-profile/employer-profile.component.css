@@ -1,0 +1,48 @@
+*{
+	margin : 0;
+	padding : 0;
+	box-sizing : border-box;
+}
+
+body{
+	background-color : lightblue;
+}
+
+#container{
+	position : relative;
+	display : flex;
+	flex-wrap : wrap;
+	justify-content : center;
+	align-content : center;
+	width : 40%;
+	left : 30%;
+	top : 100px;
+	background-color : rgba(0, 0, 0, 0.3);
+	border-radius : 20px;
+}
+
+#container .profile_pic{
+	width : 120px;
+	height : 120px;
+	border-radius : 50%;
+	position : relative;
+	margin-top : 10px;
+	overflow : hidden;
+}
+
+#container .profile_pic img{
+	width : 120px;
+}
+
+#container .details{
+	position : relative;
+	left : 20px;
+	top : 20px;
+	box-shadow : -10px -10px rgba(0, 0, 0, 0.3);
+	background-color : rgb(50, 50, 50);
+	color : white;
+	padding : 30px;
+	font-size : 24px;
+	border-radius : 20px;
+	text-align : justify;
+}

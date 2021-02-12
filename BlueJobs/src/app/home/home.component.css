@@ -1,0 +1,46 @@
+
+
+
+h2{
+    text-align: center;
+    padding: 10px;
+}
+.contain{
+    width: 100%;
+}
+.inner-contain {
+    position: absolute;
+    margin-top: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #f8f9fa;
+    padding: 50px;
+    border-radius: 20px;
+    width: 500px;
+}
+input {
+    margin-left: 0px;
+}
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn {
+    margin: 20px;
+    width: 100px;
+}
+input:hover{
+    background-color: #eee;
+}
+
+@media only screen and (max-width: 520px) {
+    .inner-contain {
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .inner-contain {
+        width: 300px;
+    }
+}

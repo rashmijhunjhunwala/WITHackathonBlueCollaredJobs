@@ -1,0 +1,49 @@
+*{
+	margin : 0;
+	padding : 0;
+	box-sizing : border-box;
+}
+
+#container{
+	position : relative;
+	top : 100px;
+	width : 70%;
+	left : 15%;
+}
+
+#container td{
+	width : 25%;
+	padding : 5px;
+	text-align : center;
+	word-wrap : break-word;
+	cursor : pointer;
+	border : 1px solid black;
+	border-radius : 20px;
+}
+
+#container td:hover{
+	background-color : rgba(0, 0, 0, 0.1);
+}
+
+#container td img{
+	width : 100px;
+}
+
+#job_menu{
+	position : relative;
+	display : flex;
+	width : 70%;
+	left : 15%;
+	top : 50px;
+}
+
+#job_menu select{
+	width : 90%;
+	height : 40px;
+	padding-left : 20px;
+}
+
+#job_menu input[type=submit]{
+	width : 10%;
+	height : 40px;
+}

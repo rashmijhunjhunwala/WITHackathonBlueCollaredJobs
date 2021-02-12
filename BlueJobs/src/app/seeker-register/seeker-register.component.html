@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+      <!--Registration form for the seeker-->
+        <div class="full-contain">
+            <h1>Register as a Seeker</h1>
+            <div class="form-container">
+              <form #f4="ngForm" (ngSubmit)="registerSeeker(f4.value)">
+
+                  <div class="form-group">            
+                        <label for="name">Name</label>
+                        <input #name="ngModel" ngModel name="name" id="name" type="text" class="form-control" required>
+                        <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+                          name is Required
+                        </div>            
+                  </div>
+
+                  <div class="form-group">            
+                    <label for="phone">Phone Number</label>
+                    <input #phone="ngModel" ngModel name="phone" id="phone" type="text" class="form-control" required>
+                    <div class="alert alert-danger" *ngIf="phone.touched && phone.invalid">
+                      Phone is Required
+                    </div>            
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Enter your email id</label>
+                    <input class="form-control" #email="ngModel" spellcheck="false" ngModel="email" name="email" type="email" id="email" required>
+                    <div class="alert alert-danger" *ngIf=" email.touched && email.invalid">
+                        Required
+                    </div>
+                </div>
+
+                  <div class="form-group">            
+                    <label for="password">Password</label>
+                    <input #password="ngModel" ngModel name="password" id="password" type="text" class="form-control" required>
+                    <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+                      Password is Required
+                    </div>            
+              </div>
+
+              <div class="form-group">
+                <label for="aadharNumber">Enter your aadharNumber</label>
+                <input #aadharNumber="ngModel" ngModel name="aadharNumber" id="aadharNumber" type="string" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="age">Enter your age</label>
+              <input #age="ngModel" ngModel name="age" id="age" type="number" class="form-control" required>
+          </div>
+
+              <div class="form-group">
+                <label for="category">Category:</label>
+                        <select #category="ngModel" ngModel name="category" id="category" type="text" class="form-control" required>
+                            <option disabled>Select Category</option>
+                            <option *ngFor="let category of CategoryList">{{category}}</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">            
+                  <label for="gender">Gender</label>
+                  <input #gender="ngModel" ngModel name="gender" id="gender" type="text" class="form-control" required>
+                  <div class="alert alert-danger" *ngIf="gender.touched && gender.invalid">
+                    gender is Required
+                  </div>            
+              </div>
+            
+              <div class="form-group">          
+                <label for="skills">Skills/Descripton/Work exp</label>
+                <textarea maxlength="150" class="form-control" id="skills" ngModel name="skills"  #skills="ngModel" rows="3"></textarea>
+            </div>
+              
+              <div class="form-group">
+                <label for="experience">Enter your years of experience</label>
+                <input #experience="ngModel" ngModel name="experience" id="experience" type="number" class="form-control" required>
+            </div>
+
+              <div class="form-group">
+                <label for="pincode">Add the pincode</label>
+                <input #pincode="ngModel" ngModel name="pincode" id="pincode" type="number" class="form-control" required>
+              </div>
+
+            <div class="form-group">          
+              <label for="address">Enter the address</label>
+              <textarea maxlength="150" class="form-control" id="address" ngModel name="address"  #address="ngModel" rows="1"></textarea>
+            </div>
+                
+                
+                
+                
+            <div class="buttonsave" align='center'>
+                <button class="btn btn-success">Save</button>
+            </div>
+                  </form>
+            </div>
+            
+            </div>
+    </body>
+</html>

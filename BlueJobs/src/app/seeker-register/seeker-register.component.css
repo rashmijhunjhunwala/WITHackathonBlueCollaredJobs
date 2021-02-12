@@ -1,0 +1,67 @@
+.full-contain{
+    width: 100%;
+}
+h1{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+	text-shadow: 10px 10px 15px #ddd;	
+}
+.form-container  {
+    max-width: 100%;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+div.input-group-append,
+button.btn.btn-light.calendar,
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+    margin: 0;
+}
+div.input-group-append[_ngcontent-c1], 
+button.btn.btn-light.calendar[_ngcontent-c1], 
+.input-group[_ngcontent-c1] > .form-control[_ngcontent-c1]:not(:last-child), 
+.input-group[_ngcontent-c1] > .custom-select[_ngcontent-c1]:not(:last-child) 
+{
+    margin: 0;
+    width: 50px;
+}
+input{
+    box-shadow:10px 10px 15px #ddd;
+}
+input:hover,textarea:hover,select:hover {
+    background-color: #eee;
+}
+.btn{
+    width: 200px;
+    padding: 15px;
+    box-shadow:10px 10px 15px #ddd; 
+    margin-bottom: 50px;   
+}
+textarea,select {
+    box-shadow:10px 10px 15px #ddd;
+}
+label {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.buttonsave {
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 850px) {
+    .form-container  {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .form-container  {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+  }

@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <!-- The stylesheets and the scripts-->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/
+      4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+
+    
+    <div class="wrapper d-flex align-items-stretch">
+      <!--The sidebar-->
+      <nav id="sidebar">
+        <div class="p-4 pt-5">
+          <a
+            class="img logo rounded-circle mb-5"
+            style="background-image: url(https://scontent.fgau1-1.fna.fbcdn.net/v/t1.0-9/25395892_1121237924679085_2104203765891560675_n.jpg?_nc_cat=103&ccb=3&_nc_sid=730e14&_nc_ohc=Hu4PiaqQMaMAX8yL_MX&_nc_ht=scontent.fgau1-1.fna&oh=92bb494704e9fcd30f04eacc02de136a&oe=604C4597)"
+          ></a>
+          <ul class="list-unstyled components mb-5">
+            <li class="active">
+              <a
+                (click)="getAllJobs()"
+                >View Jobs</a
+              >
+            </li>
+            <li>
+              <a (click)="viewProfile()">View Profile</a>
+            </li>
+            <li>
+              <a (click)="createJobs()">Create Jobs</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+      <div id="content" class="p-4 p-md-5">
+        <!--The navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" (click)="logOutEmployer()">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!--Button for sorting-->
+        <a class="btn btn-primary" (click)="sortByRecent()" style="margin-bottom: 30px;">Sort by Recent</a>
+
+        <!--The list view of the jobs-->
+        <ng-container *ngFor="let p of jobs">
+            <div style="margin-bottom: 20px;" class="card">
+                <div class="card-header">
+                  Id: {{p._id}}
+                </div>
+                <div  class="card-body">
+                  <h5 class="card-title">{{p.headLine}}</h5>
+                  <p class="card-text">Category: {{p.category}}</p>
+                  <p class="card-text">Description/SkillsRequired: {{p.skillsRequired}}</p>
+                  <p class="card-text">Wage offered: {{p.salary}}</p>
+                  <p class="card-text">Address: {{p.address}}, Pincode: {{p.pincode}}</p>
+
+                  <!--To view workers matched to that job-->
+                  <a class="btn btn-primary" (click)="routeNearbyCandidates(p)" style="margin-right: 10px;">View Workers</a>
+                  
+                  <!--The routes I could not implement because of time-->
+                  <a class="btn btn-primary" style="margin-right: 10px;">Update Job</a>
+                  <a class="btn btn-primary">Delete Job</a>
+                </div>
+              </div>
+        </ng-container>
+      </div>
+    </div>
+
+  </body>
+</html>
